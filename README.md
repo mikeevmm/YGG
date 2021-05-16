@@ -111,13 +111,13 @@ will produce a javascript file named `generator.js` . This file exposes a single
 `ygg` can be used as a module to do things on the fly. For this, the `ygg` package exposes two functions, `compile` and `interpret` .
 
 ``` javascript
-compile(grammar: String, output_file: String) - > undefined
+compile(grammar: String, output_file: String) -> undefined
 ```
 
 `compile` exposes the CLI behaviour; given a string of a grammar, it will write the compiled generator into the specified output file (specified by its name).
 
 ``` javascript
-interpret(grammar: String) - > ((String) => String)
+interpret(grammar: String) -> ((String) => String)
 ```
 
 `interpret` will take in the grammar as a string and return a function that generates members of the grammar for the provided input.
