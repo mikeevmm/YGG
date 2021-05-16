@@ -1,0 +1,37 @@
+{
+  "name": "ygg",
+  "version": "1.1.1",
+  "description": "Yet-another Grammar Grammar",
+  "main": "ygg.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeevmm/ygg.git"
+  },
+  "author": "Miguel Murça",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikeevmm/ygg/issues"
+  },
+  "homepage": "https://github.com/mikeevmm/ygg#readme",
+  "keywords": [
+    "cli",
+    "chatbot"
+  ],
+  "bin": {
+    "@miguelmurca/ygg": "bin/ygg",
+    "ygg": "bin/ygg"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0"
+  },
+  "dependencies": {
+    "arg": "^5.0.0"
+  }
+}
