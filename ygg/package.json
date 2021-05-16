@@ -1,6 +1,6 @@
 {
   "name": "@miguelmurca/ygg",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Yet-another Grammar Grammar",
   "main": "ygg.js",
   "scripts": {
