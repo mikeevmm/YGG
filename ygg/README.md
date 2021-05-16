@@ -37,6 +37,15 @@ npm install --global @miguelmurca/ygg
 ygg --help
 ```
 
+after compiling to a file (for example `mine.js`),
+
+``` javascript
+const {
+    generate
+} = require('./mine.js');
+console.log(generate('Some input'));
+```
+
 ### For programmatic usage:
 
 ``` bash
@@ -50,15 +59,6 @@ const ygg = require('@miguelmurca/ygg');
 const GRAMMAR = `( "Hello world!" )`; // Your grammar here
 const interpreter = ygg.interpret(GRAMMAR);
 console.log(interpreter('Some input.'));
-```
-
-or compile to a file (for example `mine.js` ) using `ygg` , and then
-
-``` javascript
-const {
-    generate
-} = require('./mine.js');
-console.log(generate('Some input'));
 ```
 
 ## What?
