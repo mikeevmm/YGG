@@ -65,7 +65,7 @@ console.log(interpreter('Some input.'));
 
 `ygg` plays 3 separate roles.
 
-First, it's a definition of a metasyntax notation (like, for example, [BNF][2]). What this means is that it defines a way for you to define generative grammars (i.e., acceptable sentences). You can find more information about this under [syntax](#syntax).
+First, it's a definition of a metasyntax notation (like, for example, [BNF][1]). What this means is that it defines a way for you to define generative grammars (i.e., acceptable sentences). You can find more information about this under [syntax](#syntax).
 
 Secondly, `ygg` is a command-line utility for "compiling" files defining grammars into javascript files that expose a generating function. This means you can pass in a file with your grammar to `ygg` on the command line, and produce a javascript file you can use to make, e.g., your Telegram bot. See the [CLI](#cli) section for more information.
 
@@ -81,13 +81,13 @@ It's not hard to write code to generate these texts, but it can be hard to itera
 
 `ygg` uses a [Polish notation][2]-like syntax:
 
-* `? <optional expression>` is reduced to either the expression or nothings (with equal likelihood); 
-* `| (<option 1> <option 2> ...)` is reduced to one of the options (with equal likelihood); 
-* `= <identifier> <expression>` attributes expression to the identifier, and reduces to nothing; 
-* `& "<regex>" <expression> <expression>` reduces to first/second expression if regex matches/doesn't match the input; 
-* `<identifier>` reduces to value of the identifier (which can be made up of numbers and letters); 
+* `"<literal expression>"` is reduced to the text itself, which can be delimited by `"` or `'`;
 * `( <expression> <expression> ... )` is reduced to the concatenated expressions; 
-* `"<literal expression>"` is reduced to the text itself, which can be delimited by `"` or `'`.
+* `? <optional expression>` is reduced to either the expression or nothing (with equal likelihood); 
+* `| (<option 1> <option 2> ...)` is reduced to one of the options (with equal likelihood); 
+* `<identifier>` reduces to value of the identifier (which can be made up of numbers and letters); 
+* `= <identifier> <expression>` attributes expression to the identifier, and reduces to nothing; 
+* `& "<regex>" <expression> <expression>` reduces to first/second expression if regex matches/doesn't match the input.
 
 A `ygg` grammar specification, then, is just one big grouped expression, reducing to a string:
 
