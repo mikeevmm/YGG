@@ -2,7 +2,7 @@
 
 YGG is a [generative grammar][0] metasyntax interpreter and compiler, made with bots in mind.
 
-[Tutorial on Medium.com](https://medium.com/@miguelmurca/making-a-telegram-chatbot-b936671df77c)
+[Tutorial on Gemini (Web proxy)](https://miguelmurca.flounder.online/gemlog/2021-05-18bot.gmi)
 
 ## Example
 
